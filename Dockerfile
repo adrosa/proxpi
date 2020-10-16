@@ -6,4 +6,4 @@ RUN apk add --no-cache --virtual .build-deps gcc libc-dev libxslt-dev libxml2-de
  && apk del .build-deps
 ENV FLASK_APP=proxpi.server
 ENTRYPOINT ["flask"]
-CMD ["run", "--host", "0.0.0.0", "--port", 80]
+CMD ["run", "--host", "0.0.0.0", "--port", $PORT]
